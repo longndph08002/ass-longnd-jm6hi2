@@ -14,6 +14,6 @@ product: Product = new Product();
   ngOnInit() {
   }
 addProduct(){
-    this.abc.addProduct(this.product).subscribe(data => this.router.navigateByUrl('/admin/product-manager'));
+    this.abc.addProduct(this.product).subscribe(data => this.router.navigateByUrl('/product-manager'));
   }
 }
