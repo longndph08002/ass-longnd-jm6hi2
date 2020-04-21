@@ -1,5 +1,5 @@
 <h1 style="text-align:center">Trang quản lý</h1>
-<button class="btn btn-primary" routerLink="add">Add Product</button>
+<button class="btn btn-primary" routerLink="product/add">Add Product</button>
   
  <a style="color:red" class="card-text" 
  *ngIf="selected">{{selected.desc}}</a>
@@ -13,8 +13,8 @@
     <th>Action</th>
    </tr>
 </thead>
-<tbody *ngFor="let product of products" >
-   <tr>
+<tbody  >
+   <tr *ngFor="let product of products | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
      <td>{{product.id}}</td>
     <td>{{product.name}}</td>
     <td>${{product.price}}</td>
@@ -22,8 +22,14 @@
      <td>
             <!-- <button class="btn btn-primary" routerLink="/product/{{product.id}}">Detail</button> -->
             <button class="btn btn-info ml-3" routerLink="/product/edit/{{product.id}}">Edit</button>
-            <button class="btn btn-danger ml-3" (click)="remove(product.id)">Delete</button>
+            <button class="btn btn-danger ml-3" (click)="removeItem(product.id)">Delete</button>
       </td>
+      
   </tr>
-
+  
+</tbody>
 </table>
+  <ngb-pagination
+  [(page)]="page"
+  [pageSize]="pageSize"
+  [collectionSize]="products.length"></ngb-pagination>

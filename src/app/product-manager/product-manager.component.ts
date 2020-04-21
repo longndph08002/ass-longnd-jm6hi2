@@ -9,6 +9,8 @@ import { ProductService} from '../product.service';
 export class ProductManagerComponent implements OnInit {
   selected:Product;
   products:Product[];
+  page = 1;
+  pageSize = 8;
   constructor(
     private ProductService : ProductService) { }
 
@@ -16,20 +18,20 @@ export class ProductManagerComponent implements OnInit {
      this.getProducts();
      
 }
-  showDetail(product){
-    this.selected=product;
-  }
+
   getProducts(){
     this.ProductService.getProducts().subscribe(data=> {this.products=data})
   }
   removeItem(id){
-    this.productService.removeProduct(id).subscribe(response =>{
-      this.products= this.products.filter(products => products.id !==response.id);
+    this.ProductService.removeProduct(id).subscribe(response =>{
+      
+      this.products= this.products.filter(product => product.id !==response.id)
+      ;
     })
     // this.products= this.products.filter(products => products.id !==id);
   }
-remove(id){
-  this.products = this.products.filter(x => x.id !== id);
-  }
+// remove(id){
+//   this.products = this.products.filter(x => x.id !== id);
+//   }
 }
 

@@ -34,7 +34,7 @@ export class ProductEditComponent implements OnInit {
     // console.log(this.product);
     this.productService.updateProduct(this.product).subscribe(Data => {
       // console.log(Data);
-      this.router.navigateByUrl('/admin/list');
+      this.router.navigateByUrl('quanli');
     })
   }
 

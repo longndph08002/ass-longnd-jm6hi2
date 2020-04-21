@@ -25,7 +25,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AddComponent } from './admin/add/add.component';
 
 @NgModule({
-  imports:      [HttpClientModule, BrowserModule, FormsModule,AppRoutingModule ],
+  imports:      [HttpClientModule, NgbModule,BrowserModule, FormsModule,AppRoutingModule ],
   declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, ProductComponent, ProductManagerComponent, HomeComponent, ContactComponent, CategoryComponent, DashboardComponent, IndexAdminComponent, ProductsComponent, ProductAddComponent, ProductDeleteComponent, ProductDetailComponent, ProductEditComponent, FooterComponent, AddComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService],
