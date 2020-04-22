@@ -16,6 +16,6 @@ product: Product = new Product();
   }
 addProduct(){
     this.abc.addProduct(this.product).subscribe(data => 
-    this.router.navigateByUrl('/quanli'));
+    this.router.navigateByUrl('admin/quanli'));
   }
 }

@@ -23,10 +23,12 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { FooterComponent } from './footer/footer.component';
 import { AddComponent } from './admin/add/add.component';
+import { LienheComponent } from './lienhe/lienhe.component';
+import { TrangchuComponent } from './trangchu/trangchu.component';
 
 @NgModule({
   imports:      [HttpClientModule, NgbModule,BrowserModule, FormsModule,AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, ProductComponent, ProductManagerComponent, HomeComponent, ContactComponent, CategoryComponent, DashboardComponent, IndexAdminComponent, ProductsComponent, ProductAddComponent, ProductDeleteComponent, ProductDetailComponent, ProductEditComponent, FooterComponent, AddComponent ],
+  declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, ProductComponent, ProductManagerComponent, HomeComponent, ContactComponent, CategoryComponent, DashboardComponent, IndexAdminComponent, ProductsComponent, ProductAddComponent, ProductDeleteComponent, ProductDetailComponent, ProductEditComponent, FooterComponent, AddComponent, LienheComponent, TrangchuComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService],
 

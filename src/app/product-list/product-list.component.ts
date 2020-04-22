@@ -9,7 +9,10 @@ import { ProductService } from '../product.service';
 })
 export class ProductListComponent implements OnInit { 
 selected:Product;
+ page = 1;
+  pageSize = 9;
   products:Product[];
+  
   constructor( private abc : ProductService) { }
 
   ngOnInit() {

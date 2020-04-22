@@ -1,10 +1,7 @@
 <body>  
 <h2 align="center">Edit product</h2>
 <form *ngIf="product" style="margin-left:20px">
-    <div class="form-group">
-    <label for="">Ảnh</label>
-    <input type="url" class="form-control" name="img" [(ngModel)]="product.img" >
-  </div>
+    
   <div class="form-group">
     <label for="">Product Name</label>
     <input type="text" class="form-control" name="name" [(ngModel)]="product.name">
@@ -16,6 +13,10 @@
   <div class="form-group">
     <label for="">Desc</label>
     <input type="text" class="form-control" name="desc" [(ngModel)]="product.desc">
+  </div>
+  <div class="form-group">
+    <label for="">Ảnh</label>
+    <input type="url" class="form-control" name="img" [(ngModel)]="product.img" >
   </div>
   <button class="btn btn-primary" (click)="updateProduct()">Save</button>
 </form>
