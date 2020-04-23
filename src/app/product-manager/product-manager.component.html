@@ -1,5 +1,7 @@
 <h1 style="text-align:center">Trang quản lý</h1>
-<button class="btn btn-primary" routerLink="/admin/add">Add Product</button>
+<input style="width: 300px;" class="form-control" placeholder="Search for..." type="text" [(ngModel)]="name  " (input)="search()"/>
+<br>
+<button style="float: right; margin-right: 10px;" class="btn btn-primary" routerLink="/admin/add">Add Product</button>
   
  <a style="color:red" class="card-text" 
  *ngIf="selected">{{selected.desc}}</a>
