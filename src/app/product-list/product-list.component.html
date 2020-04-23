@@ -1,5 +1,7 @@
          <h1>Sản Phẩm</h1>
          <hr>
+         <input style="width: 300px;" class="form-control" placeholder="Search for..." type="text" [(ngModel)]="name  " (input)="search()"/>
+         <br>
  <div class="row">
          
           <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
