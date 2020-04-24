@@ -186,12 +186,14 @@ h4.agile-title,h1.agile-title,h2.agile-title {
 .csslider>ul>li:first-child {
     background: url(https://www.elleman.vn/wp-content/uploads/2018/06/21/quy-tac-thoi-trang-ELLE-Man-featured.jpg) no-repeat center;
     background-size: cover;
+    height: 1000px;
     
 }
 
 .csslider>ul>li:nth-child(2) {
     background: url(https://gritdaily.com/wp-content/uploads/2020/01/2020-men-fashion.jpg) no-repeat center;
     background-size: cover;
+      height: 1000px;
 }
 
 
