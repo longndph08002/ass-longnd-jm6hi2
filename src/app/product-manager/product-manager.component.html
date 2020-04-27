@@ -1,7 +1,7 @@
 <h1 style="text-align:center">Trang quản lý</h1>
 <input style="width: 300px;" class="form-control" placeholder="Search for..." type="text" [(ngModel)]="name  " (input)="search()"/>
 <br>
-<button style="float: right; margin-right: 10px;" class="btn btn-primary" routerLink="/admin/add">Add Product</button>
+<button style="float: right; margin-right: 10px;" class="btn btn-primary" routerLink="/admin/add">Add Product   &nbsp;<i class="fas fa-plus-circle"></i></button>
   
  <a style="color:red" class="card-text" 
  *ngIf="selected">{{selected.desc}}</a>
@@ -26,8 +26,8 @@
     <td><img class="card-img-top" [src]="product.img" style="height: 100px; width: 100px; " alt=""></td>
      <td>
             <!-- <button class="btn btn-primary" routerLink="/product/{{product.id}}">Detail</button> -->
-            <button class="btn btn-info ml-3" routerLink="/admin/product/edit/{{product.id}}">Edit</button>
-            <button class="btn btn-danger ml-3" (click)="removeItem(product.id)">Delete</button>
+            <button class="btn btn-info ml-3" routerLink="/admin/product/edit/{{product.id}}">Edit &nbsp; <i class="fas fa-edit"></i></button>
+            <button class="btn btn-danger ml-3" (click)="removeItem(product.id)">Delete &nbsp;   <i class="fas fa-trash-alt"></i></button>
       </td>
       
   </tr>

@@ -1,28 +1,28 @@
-         <h1>Sản Phẩm</h1>
-         <hr>
-         <input style="width: 300px;" class="form-control" placeholder="Search for..." type="text" [(ngModel)]="name  " (input)="search()"/>
-         <br>
- <div class="row">
-         
-          <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="{{product.img}}" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">{{product.name }}</a>
-                </h4>
-                <h5>${{product.price}}</h5>
-                <!-- <p class="card-text" *ngIf="selected">{{selected.desc}}</p> -->
-                <button  class="btn btn-primary">Mua ngay</button>
-              </div>
-              
-            </div>
-          </div>
+<h1>Sản Phẩm</h1>
+<hr>
+<input style="width: 300px;" class="form-control" placeholder="Search for..." type="text" [(ngModel)]="name  " (input)="search()"/>
+<br>
+<div class="row">
 
-        
-        </div>
-        <!-- /.row -->
-          <ngb-pagination
-  [(page)]="page"
-  [pageSize]="pageSize"
-  [collectionSize]="products.length"></ngb-pagination>
+ <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+   <div class="card h-100">
+     <a href="#"><img class="card-img-top" src="{{product.img}}" alt=""></a>
+     <div class="card-body">
+       <h4 class="card-title">
+         <a href="#">{{product.name }}</a>
+       </h4>
+       <h5>${{product.price}}</h5>
+       <!-- <p class="card-text" *ngIf="selected">{{selected.desc}}</p> -->
+       <button  class="btn btn-primary">Mua ngay</button>
+     </div>
+     
+   </div>
+ </div>
+
+
+</div>
+<!-- /.row -->
+ <ngb-pagination
+[(page)]="page"
+[pageSize]="pageSize"
+[collectionSize]="products.length"></ngb-pagination>

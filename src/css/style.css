@@ -6,10 +6,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 html,
 body {
-    margin: 0;
+   
+       
+        margin: 0 auto;
     font-size: 100%;
     background: #fff;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Times New Roman';
   
 }
 
@@ -148,7 +150,7 @@ p.sub-para {
 
 .bs-slider-overlay {
     width: 100%;
-    height: 100%; 
+    height: 1200px; 
 	background: rgba(0, 0, 0, 0.3);
     background-size: 2px;
     -webkit-background-size: 2px;
@@ -158,7 +160,7 @@ p.sub-para {
 }
 .bs-slider-overlay1 {
     width: 100%;
-    height: 100%; 
+    height: 1200px; 
 	background: rgba(0, 0, 0, 0.5);
     background-size: 2px;
     -webkit-background-size: 2px;
@@ -186,14 +188,13 @@ h4.agile-title,h1.agile-title,h2.agile-title {
 .csslider>ul>li:first-child {
     background: url(https://www.elleman.vn/wp-content/uploads/2018/06/21/quy-tac-thoi-trang-ELLE-Man-featured.jpg) no-repeat center;
     background-size: cover;
-    height: 1000px;
-    
+    height: 1200px;
 }
 
 .csslider>ul>li:nth-child(2) {
     background: url(https://gritdaily.com/wp-content/uploads/2020/01/2020-men-fashion.jpg) no-repeat center;
     background-size: cover;
-      height: 1000px;
+    height: 1200px;
 }
 
 
@@ -674,7 +675,7 @@ h3.heading {
 }
 /*-- inner page banner --*/
 .inner-page-banner {
-    background: url(../images/ban1.jpg) no-repeat;
+    /* background: url(../images/ban1.jpg) no-repeat; */
     background-size: cover;
     min-height: 300px;
     position: relative;
@@ -789,7 +790,7 @@ span.fa.fa-arrow-circle-o-right {
 
 /*-- stats-count-- */
 .matter-txt{
-  background: url(../images/b3.jpg) no-repeat center;
+  /* background: url(../images/b3.jpg) no-repeat center; */
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -803,7 +804,7 @@ span.fa.fa-arrow-circle-o-right {
 
 }
 .stats-count,.clents {
-  background: url(../images/ban3.jpg) no-repeat center;
+  /* background: url(../images/ban3.jpg) no-repeat center; */
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;

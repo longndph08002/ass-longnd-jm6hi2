@@ -7,10 +7,7 @@ import { ProductAddComponent } from "./product-add/product-add.component";
 import { HomeComponent } from "./home/home.component";
 import { LienheComponent } from "./lienhe/lienhe.component";
 import { ProductEditComponent } from "./product-edit/product-edit.component";
-import { DashboardComponent } from "./admin/dashboard/dashboard.component";
-import { ProductsComponent } from "./admin/products/products.component";
 import { IndexAdminComponent } from "./admin/index-admin/index-admin.component";
-import { AddComponent } from "./admin/add/add.component";
 import { TrangchuComponent } from "./trangchu/trangchu.component";
 
 const routers: Routes = [
@@ -20,7 +17,7 @@ const routers: Routes = [
     path: "admin",
     component: IndexAdminComponent,
     children: [
-      { path: "", redirectTo: "sanpham", pathMatch: "full" },
+      { path: "", redirectTo: "quanli", pathMatch: "full" },
       { path: "product/edit/:productID", component: ProductEditComponent },
       { path: "quanli", component: ProductManagerComponent },
       { path: "sanpham", component: ProductListComponent },

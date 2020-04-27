@@ -1,21 +1,21 @@
 
- 
+ <div class="bodder">
 <h1 align="center"> Thêm Sản Phẩm </h1>
 <br> <br>
-<form style="margin-left:20px"> 
+<form style="margin-left:20px "> 
   
-   <form name="form" [formGroup]="form" (ngSubmit)="form.valid && onSubmit()">
+   <form name="form" [formGroup]="form">
       <div class="form-group">
       <label for="">Name</label>
       <input type="text" class="form-control" formControlName="name"
-      name="name" [(ngModel)]="product.name" [ngClass]="{'is-invalid':form.get('name').touched && form.get('name').invalid}" required placeholder="nhập tên sản phẩm">
+   id="name" [(ngModel)]="product.name" [ngClass]="{'is-invalid':form.get('name').touched && form.get('name').invalid}" required placeholder="nhập tên sản phẩm">
        <div class="invalid-feedback">
               <div>Tên sản phẩm không được để trống</div>
             </div>
     </div>
     <div class="form-group">
       <label for="">Price</label>
-      <input type="number" min="0" class="form-control" name="price" [(ngModel)]="product.price"
+      <input type="number" min="0" class="form-control" id="price" [(ngModel)]="product.price"
       formControlName="price" [ngClass]="{'is-invalid':form.get('price').touched && form.get('price').invalid}" required  placeholder="nhập giá "/>
             <div class="invalid-feedback">
               <div>giá sản phẩm không để trống</div>
@@ -23,20 +23,23 @@
     </div>
     <div class="form-group">
       <label for="">desc</label>
-      <input type="text" class="form-control" name="desc" [(ngModel)]="product.desc"formControlName="desc" [ngClass]="{'is-invalid':form.get('desc').touched && form.get('desc').invalid}" required placeholder="nhập mô tả sản phẩm"/>
+      <input type="text" class="form-control" id="desc" [(ngModel)]="product.desc"formControlName="desc" [ngClass]="{'is-invalid':form.get('desc').touched && form.get('desc').invalid}" required placeholder="nhập mô tả sản phẩm"/>
             <div class="invalid-feedback">
               <div>Nội dung không được để trống</div>
             </div>
     </div>
      <div class="form-group">
       <label for="">Anh</label>
-      <input type="url" class="form-control" name="img" [(ngModel)]="product.img"
+      <input type="url" class="form-control" id="img" [(ngModel)]="product.img"
       formControlName="anh" [ngClass]="{'is-invalid':form.get('anh').touched && form.get('anh').invalid}" required placeholder="Nhập link ảnh" />
             <div class="invalid-feedback">
               <div>Ảnh không được để trống</div>
             </div></div>
-    <button class="btn btn-primary" (click)="addProduct()"  [disabled]="!form.valid">Add Product</button>
-   </form>
+    <button class="btn btn-primary" style="width: 150px;" (click)="addProduct()"  [disabled]="!form.valid">Add Product</button>
+    &nbsp;<button class="btn btn-primary"  (click)="clear()"  style="width: 150px;">Clear</button>
+    &nbsp;<button class="btn btn-primary" routerLink="/admin/quanli" style="width: 150px;">Back</button>
+   
+  </form>
   </form>
  
-  
+</div>

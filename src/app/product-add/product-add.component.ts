@@ -27,4 +27,15 @@ addProduct(){
     this.abc.addProduct(this.product).subscribe(data => 
     this.router.navigateByUrl('admin/quanli'));
   }
+clear(){
+  var ten = <HTMLInputElement>document.getElementById("name");
+  ten.value = null;
+  var price = <HTMLInputElement>document.getElementById("price");
+  price.value = null;
+  var desc = <HTMLInputElement>document.getElementById("desc");
+  desc.value = null;
+  var img = <HTMLInputElement>document.getElementById("img");
+  img.value = null;
+}
+
 }
