@@ -26,9 +26,9 @@ import { AddComponent } from './admin/add/add.component';
 import { LienheComponent } from './lienhe/lienhe.component';
 import { TrangchuComponent } from './trangchu/trangchu.component';
 import {ReactiveFormsModule} from '@angular/forms';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
-  imports:      [HttpClientModule,ReactiveFormsModule, NgbModule,BrowserModule, FormsModule,AppRoutingModule ],
+  imports:      [HttpClientModule,FontAwesomeModule,ReactiveFormsModule, NgbModule,BrowserModule, FormsModule,AppRoutingModule ],
   declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, ProductComponent, ProductManagerComponent, HomeComponent, ContactComponent, CategoryComponent, DashboardComponent, IndexAdminComponent, ProductsComponent, ProductAddComponent, ProductDeleteComponent, ProductDetailComponent, ProductEditComponent, FooterComponent, AddComponent, LienheComponent, TrangchuComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService],
