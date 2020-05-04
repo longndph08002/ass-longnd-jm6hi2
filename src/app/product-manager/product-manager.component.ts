@@ -11,7 +11,7 @@ export class ProductManagerComponent implements OnInit {
   products:Product[];
   page = 1;
   pageSize = 8;
-  name:String;
+  name: string;
   constructor(
     private ProductService : ProductService) { }
 
@@ -35,15 +35,5 @@ export class ProductManagerComponent implements OnInit {
 //   this.products = this.products.filter(x => x.id !== id);
 //   }
 
-search(){
-    if(this.name !=""){
-      this.products=this.products.filter(res =>{
-        return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
-      });
-    }else if(this.name == ""){
-      this.ngOnInit();
-    }
-    
-  }
 }
 

@@ -11,7 +11,7 @@ export class ProductListComponent implements OnInit {
 selected:Product;
  page = 1;
   pageSize = 9;
-  name:String;
+  name: string;
   products:Product[];
   
   constructor( private abc : ProductService) { }
@@ -28,14 +28,4 @@ this.selected=product;
     this.abc.getProducts().subscribe(data=> {this.products =data;})
   }
   
-  search(){
-    if(this.name !=""){
-      this.products=this.products.filter(res =>{
-        return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
-      });
-    }else if(this.name == ""){
-      this.ngOnInit();
-    }
-    
-  }
 }

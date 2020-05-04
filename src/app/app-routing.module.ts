@@ -9,10 +9,10 @@ import { LienheComponent } from "./lienhe/lienhe.component";
 import { ProductEditComponent } from "./product-edit/product-edit.component";
 import { IndexAdminComponent } from "./admin/index-admin/index-admin.component";
 import { TrangchuComponent } from "./trangchu/trangchu.component";
-
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 const routers: Routes = [
   { path: "sanpham", component: ProductListComponent },
-
+  {path: 'detail/:productID', component:  ProductDetailComponent},
   {
     path: "admin",
     component: IndexAdminComponent,
@@ -21,9 +21,10 @@ const routers: Routes = [
       { path: "product/edit/:productID", component: ProductEditComponent },
       { path: "quanli", component: ProductManagerComponent },
       { path: "sanpham", component: ProductListComponent },
-      { path: "add", component: ProductAddComponent }
+      { path: "add", component: ProductAddComponent },
     ]
   },
+ 
   { path: "", redirectTo: "home/trangchu", pathMatch: "full" },
 
   {

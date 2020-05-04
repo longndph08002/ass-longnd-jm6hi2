@@ -1,5 +1,5 @@
-<h1 style="text-align:center">Trang quản lý</h1>
-<input style="width: 300px;" class="form-control" placeholder="Search for..." type="text" [(ngModel)]="name  " (input)="search()"/>
+<h1 style="text-align:center">Manager</h1>
+<input style="width: 300px;" class="form-control" placeholder="Search for..." type="text" [(ngModel)]="name"/>
 <br>
 <button style="float: right; margin-right: 10px;" class="btn btn-primary" routerLink="/admin/add">Add Product   &nbsp;<i class="fas fa-plus-circle"></i></button>
   
@@ -18,7 +18,7 @@
    </tr>
 </thead>
 <tbody  >
-   <tr *ngFor="let product of products | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+   <tr *ngFor="let product of products |filter: name | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
      <td>{{product.id}}</td>
     <td>{{product.name}}</td>
     <td>${{product.price}}</td>
