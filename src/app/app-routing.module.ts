@@ -12,7 +12,6 @@ import { TrangchuComponent } from "./trangchu/trangchu.component";
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 const routers: Routes = [
   { path: "sanpham", component: ProductListComponent },
-  {path: 'detail/:productID', component:  ProductDetailComponent},
   {
     path: "admin",
     component: IndexAdminComponent,
@@ -32,6 +31,7 @@ const routers: Routes = [
     component: HomeComponent,
     children: [
       { path: "", redirectTo: "trangchu", pathMatch: "full" },
+  {path: 'detail/:productID', component:  ProductDetailComponent},
 
       { path: "trangchu", component: TrangchuComponent },
       { path: "lienhe", component: LienheComponent },

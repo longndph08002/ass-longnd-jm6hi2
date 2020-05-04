@@ -1,22 +1,112 @@
 
-<div class='aaa'>
-    <!-- <h1 class="my-4">Chi Tiết Sản Phẩm</h1> -->
-    <div class="card mb-3" style="max-width: 700px;"  *ngIf='product'>
-        <div class="row">
-            <div class="col-md-7">
-                <img class="img-fluid rounded mb-3 mb-md-0" [src]="product.img" alt="">
-            </div>
-            <div class="col-md-5" style="margin-top: 5 0px;">
-              <h5 class="card-title">Tên sản phẩm : {{product.name}}</h5>
-              <br>
-              <h6><p class="card-text"></p> giá : ${{product.price}} VNĐ</h6>
-              <br>
-              <p class="card-text">Mô tả sản phẩm:</p>
-                <p> {{product.desc}}</p>
-            </div>
+  <body>
+    
+  
+  <div class="card" *ngIf='product'>
+    <div class="container-fliud">
+      <div class="wrapper row">
+        <div class="preview col-md-6">
+          
+          <div class="preview-pic tab-content">
+            <div class="tab-pane active" id="pic-1"><img [src]="product.img" class="card-img" width="200px"  /></div>
+            
           </div>
+          
+          
+        </div>
+        <div class="details col-md-6">
+          <h5 class="card-title"> {{product.name}}</h5>
+          <div class="rating">
+            <div class="stars">
+              <span><i class="fas fa-star"></i></span> 
+              <span><i class="fas fa-star"></i></span>
+              <span><i class="fas fa-star-half-alt"></i></span>
+              <span><i class="far fa-star"></i></span>
+              <span><i class="far fa-star"></i></span>
+                </div>
+            <span class="review-no">12 reviews</span>
+          </div>
+          <p class="card-text"><small class="text-muted">{{product.desc}}</small></p>
+
+          <h4 class="price">price: <span>${{product.price}}</span></h4>
+          
+          <div class="action">
+            <button type="submit" class="w3ls-cart" ><i class="fas fa-cart-arrow-down"></i> Add to cart</button>
+            &nbsp; &nbsp; &nbsp;<button class="w3ls-cart w3ls-cart-like"><i class="fas fa-thumbs-up"></i> Add to Wishlist</button>
+          </div>
+        </div>
       </div>
     </div>
-    
-    
-    
+    <div class="card my-4">
+      <h5 class="card-header">Leave a Comment:</h5>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  <div class="collpse tabs">
+				<h3 class="w3ls-title">About this item</h3> 
+				<div class="panel-group collpse" id="accordion" role="tablist" aria-multiselectable="true">
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingOne">
+							<h4 class="panel-title">
+								<a class="pa_italic" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									 Description	</a>
+							</h4>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+							<div class="panel-body">
+								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingTwo">
+							<h4 class="panel-title">
+								<a class="collapsed pa_italic" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									 additional information 	</a> 
+							</h4>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							<div class="panel-body">
+								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingThree">
+							<h4 class="panel-title">
+								<a class="collapsed pa_italic" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+									 reviews (5)  
+								</a>
+							</h4>
+						</div>
+						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+							<div class="panel-body">
+								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingFour">
+							<h4 class="panel-title">
+								<a class="collapsed pa_italic" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+								help 	</a>
+							</h4>
+						</div>
+						<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+							<div class="panel-body">
+								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //collapse --> 
+    </div>
+  
+  </body>

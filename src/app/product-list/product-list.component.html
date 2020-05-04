@@ -6,14 +6,14 @@
 
  <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products | filter: name | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
    <div class="card h-100">
-    <a  routerLink="/detail/{{product.id}}"><img class="card-img-top" [src]="product.img" alt=""></a>
+    <a  routerLink="/home/detail/{{product.id}}"><img class="card-img-top" [src]="product.img" alt=""></a>
      <div class="card-body">
        <h4 class="card-title">
-         <a href="#">{{product.name }}</a>
+         <a href="#" >{{product.name }}</a>
        </h4>
        <h5>${{product.price}}</h5>
        <!-- <p class="card-text" *ngIf="selected">{{selected.desc}}</p> -->
-       <button  class="btn btn-primary" routerLink="/detail/{{product.id}}">Buy Now</button>
+       <button  class="btn btn-primary" routerLink="/home/detail/{{product.id}}">Buy Now</button>
        
      </div>
      
