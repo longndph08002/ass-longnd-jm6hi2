@@ -32,10 +32,17 @@ export class ProductEditComponent implements OnInit {
 
   updateProduct(){
     // console.log(this.product);
-    this.productService.updateProduct(this.product).subscribe(Data => {
-      // console.log(Data);
-      this.router.navigateByUrl('admin/quanli');
-    })
+
+    if (confirm("Do you want to update ?")==true) {
+      this.productService.updateProduct(this.product).subscribe(Data => {
+        // console.log(Data);
+        alert("update successfully")
+        this.router.navigateByUrl('admin/quanli');
+      })
+    } else {
+      
+    }
+    
   }
 
 

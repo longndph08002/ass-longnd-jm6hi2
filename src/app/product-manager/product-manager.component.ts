@@ -24,11 +24,17 @@ export class ProductManagerComponent implements OnInit {
     this.ProductService.getProducts().subscribe(data=> {this.products=data})
   }
   removeItem(id){
-    this.ProductService.removeProduct(id).subscribe(response =>{
+    if (confirm("Do you want to delete?")==true) {
+      this.ProductService.removeProduct(id).subscribe(response =>{
+        
+        this.products= this.products.filter(product => product.id !==response.id)
+        ;
+        alert("delete successfully")
+      })
+    } else {
       
-      this.products= this.products.filter(product => product.id !==response.id)
-      ;
-    })
+    }
+    
     // this.products= this.products.filter(products => products.id !==id);
   }
 // remove(id){

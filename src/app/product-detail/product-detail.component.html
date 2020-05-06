@@ -1,7 +1,8 @@
 
   <body>
     
-  
+	<!-- <script src="js/imagezoom.js"></script> -->
+
   <div class="card" *ngIf='product'>
     <div class="container-fliud">
       <div class="wrapper row">
@@ -33,7 +34,10 @@
           <div class="action">
             <button type="submit" class="w3ls-cart" ><i class="fas fa-cart-arrow-down"></i> Add to cart</button>
             &nbsp; &nbsp; &nbsp;<button class="w3ls-cart w3ls-cart-like"><i class="fas fa-thumbs-up"></i> Add to Wishlist</button>
-          </div>
+		  </div>
+		  <br>
+		  <button  style="text-align: center; width: 200px;margin-left: 40px;" type="submit" routerLink="/home/sanpham" class="w3ls-cart-aa" > Back</button>
+
         </div>
       </div>
     </div>

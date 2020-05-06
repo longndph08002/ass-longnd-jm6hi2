@@ -12,7 +12,7 @@ export class ProductAddComponent implements OnInit {
   form = new FormGroup({
   price:new FormControl('',Validators.required),
   name:new FormControl('',[Validators.required,
-     Validators.maxLength(00),
+     Validators.maxLength(200),
     Validators.minLength(1),]),
   
   desc:new FormControl('',Validators.required),
@@ -25,8 +25,14 @@ product: Product = new Product();
   ngOnInit() {
   }
 addProduct(){
+  if (confirm("Do you want to save?")==true) {
     this.abc.addProduct(this.product).subscribe(data => 
-    this.router.navigateByUrl('admin/quanli'));
+      this.router.navigateByUrl('admin/quanli'));
+      alert("save successfully")
+  } else {
+    
+  }
+    
   }
 clear(){
   var ten = <HTMLInputElement>document.getElementById("name");
