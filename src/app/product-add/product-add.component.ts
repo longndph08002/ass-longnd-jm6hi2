@@ -11,11 +11,12 @@ import { FormGroup,FormControl, Validators } from '@angular/forms';
 export class ProductAddComponent implements OnInit {
   form = new FormGroup({
   price:new FormControl('',Validators.required),
-  name:new FormControl('',Validators.required),
+  name:new FormControl('',[Validators.required,
+     Validators.maxLength(00),
+    Validators.minLength(1),]),
+  
   desc:new FormControl('',Validators.required),
   anh:new FormControl('',Validators.required),
-
-
 })
 product: Product = new Product();
   constructor(private abc : ProductService,
